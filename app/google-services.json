@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "12162274475",
+    "firebase_url": "https://enemquiz-faac1.firebaseio.com",
+    "project_id": "enemquiz-faac1",
+    "storage_bucket": "enemquiz-faac1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12162274475:android:4617f84adb573473",
+        "android_client_info": {
+          "package_name": "br.com.sardinha.iohan.enem_quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12162274475-b8eniaqj5a8td05mksrvc71q7cq42nq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.sardinha.iohan.enem_quiz",
+            "certificate_hash": "f2a47f355f4c0211adb1f3e706747cb8f3494d1c"
+          }
+        },
+        {
+          "client_id": "12162274475-c3pmun3t3hre1c211vkr98qj9ffkqq1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4LZ68m4c8czkPb1q3fNmCZgr0T0b8T1o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12162274475-c3pmun3t3hre1c211vkr98qj9ffkqq1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
