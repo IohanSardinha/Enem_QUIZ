@@ -5,7 +5,10 @@
     android:id="@+id/activity_question"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.sardinha.iohan.enem_quiz.QuestionActivity">
+    tools:context="br.com.sardinha.iohan.enem_quiz.QuestionActivity"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,6 +28,7 @@
                 android:textAlignment="center" />
 
             <Button
+                android:layout_marginTop="16dp"
                 android:text="A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
