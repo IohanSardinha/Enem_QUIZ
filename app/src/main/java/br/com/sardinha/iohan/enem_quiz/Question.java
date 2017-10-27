@@ -1,9 +1,5 @@
 package br.com.sardinha.iohan.enem_quiz;
 
-/**
- * Created by iohan.soares on 07/07/2017.
- */
-
 public class Question {
     private String text;
     private String a;
