@@ -23,9 +23,40 @@
         android:text="Começar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/comecar"
+        android:onClick="comecar"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="121dp"
-        android:id="@+id/button"
-        android:onClick="comecar" />
+        android:layout_marginTop="172dp" />
+
+    <Button
+        android:id="@+id/sugerir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comecar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="sugerir"
+        android:text="Sugerir Questão" />
+
+    <Button
+        android:id="@+id/sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sair"
+        android:text="Sair"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/aprovar"
+        android:layout_alignLeft="@+id/comecar"
+        android:layout_alignStart="@+id/comecar" />
+
+    <Button
+        android:id="@+id/aprovar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sugerir"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Aprovar questões"
+        android:visibility="gone" />
 </RelativeLayout>

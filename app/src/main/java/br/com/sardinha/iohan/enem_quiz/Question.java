@@ -1,6 +1,8 @@
 package br.com.sardinha.iohan.enem_quiz;
 
 public class Question {
+
+    private String id;
     private String text;
     private String a;
     private String b;
@@ -8,6 +10,7 @@ public class Question {
     private String d;
     private String e;
     private String answer;
+    private String materia;
 
     public String getText() {
         return text;
@@ -65,11 +68,27 @@ public class Question {
         this.answer = answer;
     }
 
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public Question() {
 
     }
 
-    public Question(String text, String a, String b, String c, String d, String e, String answer) {
+    public Question(String text, String a, String b, String c, String d, String e, String answer, String materia) {
 
         this.text = text;
         this.a = a;
@@ -78,5 +97,9 @@ public class Question {
         this.d = d;
         this.e = e;
         this.answer = answer;
+        this.materia = materia;
     }
+
+
+
 }

@@ -19,7 +19,7 @@ public class QuestionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        reference = FirebaseDatabase.getInstance().getReference("Questões").child("0001");
+        reference = FirebaseDatabase.getInstance().getReference("Questões").child("-Kxswgw7p-PgzDlycvH-");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

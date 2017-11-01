@@ -1,11 +1,18 @@
 package br.com.sardinha.iohan.enem_quiz;
 
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable{
 
     private String id;
     private  String nome;
     private String email;
+    private boolean admin;
+
+    public boolean isAdmin() {
+        return admin;
+    }
 
     public String getId() {
         return id;
@@ -41,6 +48,7 @@ public class User {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        this.admin = false;
     }
 
 

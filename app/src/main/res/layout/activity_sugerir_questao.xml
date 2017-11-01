@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.sardinha.iohan.enem_quiz.SugerirQuestaoActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/texto_questao_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Texto da questão"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_below="@id/spinner"/>
+
+        <EditText
+            android:id="@+id/a_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texto_questao_sugerir_questao"
+            android:ems="10"
+            android:hint="A)"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/b_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="B)"
+            android:inputType="textMultiLine"
+            android:layout_below="@id/a_sugerir_questao"/>
+
+        <EditText
+            android:id="@+id/c_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/b_sugerir_questao"
+            android:ems="10"
+            android:hint="C)"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/d_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/c_sugerir_questao"
+            android:ems="10"
+            android:hint="D)"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/e_sugerir_questao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/d_sugerir_questao"
+            android:ems="10"
+            android:hint="E)"
+            android:inputType="textMultiLine" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e_sugerir_questao"/>
+
+        <Button
+            android:id="@+id/enviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner2"
+            android:onClick="enviar"
+            android:text="Enviar para seleção" />
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

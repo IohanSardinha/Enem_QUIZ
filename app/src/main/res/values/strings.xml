@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Enem_QUIZ</string>
+    <string-array name="materias">
+        <item>Matérias</item>
+        <item>CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS</item>
+        <item>LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS</item>
+        <item>MATEMÁTICA E SUAS TECNOLOGIAS</item>
+        <item>CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS</item>
+    </string-array>
+    <string-array name="opcoes">
+        <item>Resposta</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
 </resources>

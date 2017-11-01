@@ -35,42 +35,42 @@ public class RegistrarActivity extends AppCompatActivity {
         senha = (TextView)findViewById(R.id.senha_registrar);
         confSenha = (TextView)findViewById(R.id.confirmar_senha_registrar);
 
-        //auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
 
         usersReference = FirebaseDatabase.getInstance().getReference("Usuários");
     }
 
-//    public void enviar(View view) {
-//        if(nome.getText().toString().isEmpty() || email.getText().toString().isEmpty() || senha.getText().toString().isEmpty() || confSenha.getText().toString().isEmpty())
-//        {
-//            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
-//        }
-//        else if(!senha.getText().equals(confSenha.getText()))
-//        {
-//            Toast.makeText(this, "Senhas não batem!", Toast.LENGTH_SHORT).show();
-//        }
-//        else
-//        {
-//            auth.createUserWithEmailAndPassword(email.getText().toString(),senha.getText().toString()).addOnSuccessListener(this, new OnSuccessListener<AuthResult>() {
-//                @Override
-//                public void onSuccess(AuthResult authResult) {
-//                    String id = authResult.getUser().getUid();
-//                    User user = new User(id,nome.getText().toString(),email.getText().toString());
-//                    usersReference.child(id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<Void> task) {
-//                            finish();
-//                        }
-//                    });
-//
-//                }
-//            })
-//            .addOnFailureListener(this, new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception e) {
-//                    Toast.makeText(RegistrarActivity.this, "Algo deu errado, tente mais tarde", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//        }
-//    }
+    public void enviar(View view) {
+        if(nome.getText().toString().isEmpty() || email.getText().toString().isEmpty() || senha.getText().toString().isEmpty() || confSenha.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
+        }
+        else if(!senha.getText().toString().equals(confSenha.getText().toString()))
+        {
+            Toast.makeText(this, "Senhas não batem!", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            auth.createUserWithEmailAndPassword(email.getText().toString(),senha.getText().toString()).addOnSuccessListener(this, new OnSuccessListener<AuthResult>() {
+                @Override
+                public void onSuccess(AuthResult authResult) {
+                    String id = authResult.getUser().getUid();
+                    User user = new User(id,nome.getText().toString(),email.getText().toString());
+                    usersReference.child(id).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            finish();
+                        }
+                    });
+
+                }
+            })
+            .addOnFailureListener(this, new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(RegistrarActivity.this, "Algo deu errado, tente mais tarde", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
 }
