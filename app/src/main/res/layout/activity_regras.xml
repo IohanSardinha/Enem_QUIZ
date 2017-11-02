@@ -4,10 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="10dp"
     tools:context="br.com.sardinha.iohan.enem_quiz.RegrasActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Matérias"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/humanas"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -17,33 +31,168 @@
         android:text="CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS" />
 
     <Switch
-        android:id="@+id/switch2"
+        android:id="@+id/portugues"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/switch1"
+        android:layout_below="@+id/humanas"
         android:checked="true"
         android:text="LINGUAGENS, CÓDIGOS E SUAS TECNOLOGIAS" />
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/matematica"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/switch2"
+        android:layout_below="@+id/portugues"
         android:checked="true"
         android:text="MATEMÁTICA E SUAS TECNOLOGIAS" />
 
     <Switch
-        android:id="@+id/switch4"
+        android:id="@+id/ciencias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/switch3"
+        android:layout_below="@+id/matematica"
         android:checked="true"
         android:text="CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ciencias"
+        android:layout_marginTop="25dp"
+        android:text="Número de questões"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <EditText
+        android:id="@+id/numero_de_questoes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4"
+        android:ems="10"
+        android:hint="00"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="45"
+        android:textAlignment="center" />
+
+    <FrameLayout
+        android:id="@+id/tempo_holder"
+        android:layout_width="165dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/tempo_on_off"
+        android:layout_toRightOf="@+id/tempo_on_off"
+        android:layout_toEndOf="@+id/tempo_on_off">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="Minutos" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:text="Segundos" />
+
+        <EditText
+            android:id="@+id/horas"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="00"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="4"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/minutos"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="00"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="30"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/segundos"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="00"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="00"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="25dp"
+            android:text=":"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:text=":"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="24sp" />
+
+    </FrameLayout>
+
+    <Switch
+        android:id="@+id/tempo_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:text="Tempo" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:onClick="comecar"
+        android:text="Começar" />
 
 </RelativeLayout>

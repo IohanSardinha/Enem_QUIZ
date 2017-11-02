@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_question"
@@ -8,7 +9,7 @@
     tools:context="br.com.sardinha.iohan.enem_quiz.QuestionActivity"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp">
+    android:layout_marginTop="10dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,6 +20,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingEnd="70dp"
+                    app:srcCompat="@drawable/ic_access_time_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tempo_count_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:text="00:00:00"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
             <TextView
                 android:text="PERGUNTA"
                 android:layout_width="match_parent"
@@ -28,35 +54,45 @@
                 android:textAlignment="center" />
 
             <Button
+                android:id="@+id/opcaoA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:onClick="getAnswer"
                 android:text="A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/opcaoA" />
+                android:textAlignment="viewStart" />
 
             <Button
+                android:id="@+id/opcaoB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getAnswer"
                 android:text="B"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/opcaoB" />
+                android:textAlignment="viewStart" />
 
             <Button
+                android:id="@+id/opcaoC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getAnswer"
                 android:text="C"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/opcaoC" />
+                android:textAlignment="viewStart" />
 
             <Button
+                android:id="@+id/opcaoD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="getAnswer"
                 android:text="D"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/opcaoD" />
+                android:textAlignment="viewStart" />
 
             <Button
-                android:text="E"
+                android:id="@+id/opcaoE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/opcaoE" />
+                android:onClick="getAnswer"
+                android:text="E"
+                android:textAlignment="viewStart" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

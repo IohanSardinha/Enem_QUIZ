@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".RegistrarActivity" />
         <activity android:name=".SugerirQuestaoActivity" />
-        <activity android:name=".RegrasActivity"></activity>
+        <activity android:name=".RegrasActivity" />
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".AprovarQuestoesActivity"></activity>
     </application>
 
 </manifest>

@@ -20,14 +20,14 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Começar"
+        android:id="@+id/comecar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/comecar"
-        android:onClick="comecar"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="172dp" />
+        android:layout_marginTop="172dp"
+        android:onClick="comecar"
+        android:text="Jogar" />
 
     <Button
         android:id="@+id/sugerir"
@@ -57,6 +57,7 @@
         android:layout_below="@+id/sugerir"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
+        android:onClick="aprovar"
         android:text="Aprovar questões"
         android:visibility="gone" />
 </RelativeLayout>

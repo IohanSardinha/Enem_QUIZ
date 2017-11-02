@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.sardinha.iohan.enem_quiz.AprovarQuestoesActivity">
+
+    <ScrollView
+        android:id="@+id/holder_aprovar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="rejeitar"
+                    android:text="Rejeitar" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="aprovar"
+                    android:text="Aprovar" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/texto_questao_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="TEXTO" />
+
+            <TextView
+                android:id="@+id/a_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A" />
+
+            <TextView
+                android:id="@+id/b_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B" />
+
+            <TextView
+                android:id="@+id/c_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C" />
+
+            <TextView
+                android:id="@+id/d_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D" />
+
+            <TextView
+                android:id="@+id/e_aprovar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

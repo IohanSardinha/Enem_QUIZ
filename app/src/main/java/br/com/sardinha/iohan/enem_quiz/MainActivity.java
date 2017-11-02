@@ -74,4 +74,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    public void aprovar(View view) {
+        startActivity(new Intent(this,AprovarQuestoesActivity.class));
+    }
 }
