@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Enem_QUIZ</string>
+    <string name="app_name">Quiz Enem</string>
     <string-array name="materias">
         <item>Matérias</item>
         <item>CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS</item>

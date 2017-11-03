@@ -4,60 +4,72 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.sardinha.iohan.enem_quiz.MainActivity">
 
-    <TextView
-        android:text="Quiz ENEM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@+id/main_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
-    <Button
-        android:id="@+id/comecar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="172dp"
-        android:onClick="comecar"
-        android:text="Jogar" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="70sp" />
 
-    <Button
-        android:id="@+id/sugerir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/comecar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:onClick="sugerir"
-        android:text="Sugerir Questão" />
+        <Button
+            android:id="@+id/sair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comecar"
+            android:layout_alignStart="@+id/comecar"
+            android:layout_below="@+id/aprovar"
+            android:layout_marginTop="11dp"
+            android:onClick="sair"
+            android:text="Sair" />
 
-    <Button
-        android:id="@+id/sair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="sair"
-        android:text="Sair"
-        android:layout_marginTop="11dp"
-        android:layout_below="@+id/aprovar"
-        android:layout_alignLeft="@+id/comecar"
-        android:layout_alignStart="@+id/comecar" />
+        <Button
+            android:id="@+id/sugerir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comecar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:onClick="sugerir"
+            android:text="Sugerir Questão" />
 
-    <Button
-        android:id="@+id/aprovar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sugerir"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
-        android:onClick="aprovar"
-        android:text="Aprovar questões"
-        android:visibility="gone" />
+        <Button
+            android:id="@+id/comecar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="92dp"
+            android:onClick="comecar"
+            android:text="Jogar" />
+
+        <Button
+            android:id="@+id/aprovar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sugerir"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:onClick="aprovar"
+            android:text="Aprovar questões"
+            android:visibility="gone" />
+    </RelativeLayout>
+
 </RelativeLayout>

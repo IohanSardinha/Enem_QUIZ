@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -42,6 +43,10 @@ public class SugerirQuestaoActivity extends AppCompatActivity {
         adapter = ArrayAdapter.createFromResource(this,R.array.opcoes,R.layout.support_simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter);
+        if(currentUser.isAdmin())
+        {
+            ((Button)findViewById(R.id.enviar)).setText("Enviar");
+        }
     }
 
     public void enviar(View view) {

@@ -161,7 +161,7 @@ public class QuestionActivity extends AppCompatActivity {
                 public void run() {
                     Draw();
                 }
-            },250);
+            },500);
         }
         else if(view.getId() == R.id.opcaoB)
         {
@@ -174,7 +174,7 @@ public class QuestionActivity extends AppCompatActivity {
                 public void run() {
                     Draw();
                 }
-            },250);
+            },500);
         }
         else if(view.getId() == R.id.opcaoC)
         {
@@ -187,7 +187,7 @@ public class QuestionActivity extends AppCompatActivity {
                 public void run() {
                     Draw();
                 }
-            },250);
+            },500);
         }
         else if(view.getId() == R.id.opcaoD)
         {
@@ -200,7 +200,7 @@ public class QuestionActivity extends AppCompatActivity {
                 public void run() {
                     Draw();
                 }
-            },250);
+            },500);
         }
         else if(view.getId() == R.id.opcaoE)
         {
@@ -213,7 +213,7 @@ public class QuestionActivity extends AppCompatActivity {
                 public void run() {
                     Draw();
                 }
-            },250);
+            },500);
         }
     }
 }

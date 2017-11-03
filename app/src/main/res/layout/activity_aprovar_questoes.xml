@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="br.com.sardinha.iohan.enem_quiz.AprovarQuestoesActivity">
 
     <ScrollView
@@ -29,6 +30,7 @@
                     android:id="@+id/button8"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
                     android:background="@android:color/holo_red_light"
                     android:onClick="rejeitar"
@@ -38,6 +40,7 @@
                     android:id="@+id/button7"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:background="@android:color/holo_green_light"
                     android:onClick="aprovar"
@@ -48,38 +51,73 @@
                 android:id="@+id/texto_questao_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="TEXTO" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:paddingBottom="5dp"
+                android:paddingEnd="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:text="TEXTO"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
             <TextView
                 android:id="@+id/a_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="A" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="5dp"
+                android:text="A"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
             <TextView
                 android:id="@+id/b_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="B" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="5dp"
+                android:text="B"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
             <TextView
                 android:id="@+id/c_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="C" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="5dp"
+                android:text="C"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
             <TextView
                 android:id="@+id/d_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="D" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="5dp"
+                android:text="D"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
             <TextView
                 android:id="@+id/e_aprovar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="E" />
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_default"
+                android:padding="5dp"
+                android:text="E"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

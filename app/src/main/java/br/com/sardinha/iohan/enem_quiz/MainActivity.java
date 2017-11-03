@@ -1,10 +1,12 @@
 package br.com.sardinha.iohan.enem_quiz;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView title = (TextView)findViewById(R.id.textView);
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"font.otf");
+        title.setTypeface(typeface);
         auth = FirebaseAuth.getInstance();
         FirebaseUser u = auth.getCurrentUser();
         if(u == null)
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             ((Button)findViewById(R.id.sugerir)).setText("Criar questão");
             findViewById(R.id.aprovar).setVisibility(View.VISIBLE);
         }
+        findViewById(R.id.main_holder).setVisibility(View.VISIBLE);
     }
 
     public void comecar(View view) {

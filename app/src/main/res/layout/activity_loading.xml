@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="br.com.sardinha.iohan.enem_quiz.LoadingActivity">
 
     <ProgressBar
@@ -13,6 +14,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:progressTint="@color/colorAccent"
         tools:layout_editor_absoluteX="167dp"
         tools:layout_editor_absoluteY="218dp" />
 </RelativeLayout>

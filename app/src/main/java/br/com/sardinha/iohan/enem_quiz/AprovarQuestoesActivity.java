@@ -88,38 +88,45 @@ public class AprovarQuestoesActivity extends AppCompatActivity {
                             finish();
                         }
                     }).show();
-            return;
         }
-        currentQuestion = questions.get(position);
-        pergunta.setText(currentQuestion.getText());
-        a.setText("A) "+currentQuestion.getA());
-        b.setText("B) "+currentQuestion.getB());
-        c.setText("C) "+currentQuestion.getC());
-        d.setText("D) "+currentQuestion.getD());
-        e.setText("E) "+currentQuestion.getE());
-        switch (currentQuestion.getAnswer())
-        {
-            case "A":
-                a.setTextColor(Color.GREEN);
-                break;
-            case "B":
-                a.setTextColor(Color.GREEN);
-                break;
-            case "C":
-                a.setTextColor(Color.GREEN);
-                break;
-            case "D":
-                a.setTextColor(Color.GREEN);
-                break;
-            case "E":
-                a.setTextColor(Color.GREEN);
-                break;
+        else {
+            currentQuestion = questions.get(position);
+            pergunta.setText(currentQuestion.getText());
+            a.setText("A) " + currentQuestion.getA());
+            b.setText("B) " + currentQuestion.getB());
+            c.setText("C) " + currentQuestion.getC());
+            d.setText("D) " + currentQuestion.getD());
+            e.setText("E) " + currentQuestion.getE());
+
+            a.setTextColor(Color.BLACK);
+            b.setTextColor(Color.BLACK);
+            c.setTextColor(Color.BLACK);
+            d.setTextColor(Color.BLACK);
+            e.setTextColor(Color.BLACK);
+
+            switch (currentQuestion.getAnswer()) {
+                case "A":
+                    a.setTextColor(Color.rgb(0, 155, 0));
+                    return;
+                case "B":
+                    b.setTextColor(Color.rgb(0, 155, 0));
+                    return;
+                case "C":
+                    c.setTextColor(Color.rgb(0, 155, 0));
+                    return;
+                case "D":
+                    d.setTextColor(Color.rgb(0, 155, 0));
+                    return;
+                case "E":
+                    e.setTextColor(Color.rgb(0, 155, 0));
+                    return;
+            }
         }
     }
 
     public void rejeitar(View view) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Um momento por favor");
+        progressDialog.setTitle("Um momento por favor...");
         progressDialog.show();
         reference.child(currentQuestion.getId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -132,7 +139,7 @@ public class AprovarQuestoesActivity extends AppCompatActivity {
 
     public void aprovar(View view) {
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Carregando dados...");
+        progressDialog.setTitle("Um momento por favor...");
         progressDialog.show();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Questões").child(currentQuestion.getId());
         ref.setValue(currentQuestion).addOnCompleteListener(new OnCompleteListener<Void>() {
